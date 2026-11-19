@@ -1,6 +1,6 @@
 <?php
 //se llama a la conexion 
-include 'config.php';
+include __DIR__ . "/../configuraciones/config.php";
 
 // se verifica el metodo POST
 if($_SERVER["REQUEST_METHOD"]=="POST"){
@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
         $stmt->close();
         $conexion->close();
         //se redirije a la pagina principal
-        header("Location: index.php");
+        header("Location: ../index.php");
         exit();
     } else {
         //en caso de error se muestra

@@ -1,6 +1,6 @@
 <?php
 //se llama a la conexion
-include "config.php";
+include __DIR__ . "/../configuraciones/config.php";
 
 //Verificar que llego el id
 if(!isset($_GET['id'])){
@@ -48,7 +48,7 @@ $conexion->close();
         <!-- boton para enviar -->
         <button type="submit">Guardar Cambios</button>
         <!-- boton para cancelar y volver a la pagina principal -->
-        <a href="index.php">Cancelar</a>
+        <a href="../index.php">Cancelar</a>
     </form>
 </body>
 </html>

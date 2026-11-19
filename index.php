@@ -1,6 +1,6 @@
 <?php
 //Se llama a la conexion con la base de datos
-include 'config.php';
+include __DIR__ . "/configuraciones/config.php";
 
 //se llaman los objetos en la base de datos
 $sql = "SELECT id, user, password, registration_date FROM login";
@@ -52,12 +52,12 @@ if ($result === false) {
             <!-- Zona de acciones e interacciones con la base de datos -->
             <td>
                 <!-- redirije al archivo para editar y envia con metodo get el Id -->
-                <a href="edit_user.php?id=<?php echo $row['id']; ?>">
+                <a href="/proyecto-personal/edit-user/edit_user.php?id=<?php echo $row['id']; ?>">
                     <button>Editar</button>
                 </a>
                 <!-- redirije al archivo para eliminar y envia el id con metodo get
                  tambien muestra un mensaje de confirmacion -->
-                <a href="delete_user.php?id=<?php echo $row['id']; ?>"
+                <a href="/proyecto-personal/delete-user/delete_user.php?id=<?php echo $row['id']; ?>"
                 onclick="return confirm('Estas seguro de eliminar este usuario?')">
                     <button>Eliminar</button>
                 </a>
@@ -68,7 +68,7 @@ if ($result === false) {
     </table>
     <br>
     <!-- se redirije al archivo para insertar un usuario -->
-    <a href="insert_user.php">
+    <a href="/proyecto-personal/insert-user/insert_user.php">
         <button>Insertar</button>
     </a>
 </body>

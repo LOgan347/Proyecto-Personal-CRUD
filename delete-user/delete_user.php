@@ -1,6 +1,6 @@
 <?php 
 // llamamos a la conexion
-include "config.php";
+include __DIR__ . "/../configuraciones/config.php";
 
 // verificamos la obtencion de un id
 if(isset($_GET['id'])){
@@ -12,7 +12,7 @@ if(isset($_GET['id'])){
     // se verifica su ejecucion 
     if($stmt->execute()){
         // redirijimos a la pagina de inicio
-        header("location: index.php");
+        header("location: ../index.php");
         exit();
     } else {
         // si hubo errores
